@@ -2,7 +2,7 @@
     "name": "Player",
     "maps": [
         {
-            "name": "Player",
+            "name": "Player1",
             "id": "84934eb3-01a6-44ad-b076-eab062a3f5ed",
             "actions": [
                 {
@@ -42,6 +42,56 @@
                     "name": "right",
                     "id": "b5476fab-95ba-48c5-a51e-ee3f85b1a976",
                     "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouuse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Player2",
+            "id": "05e9c267-ff10-4f05-893f-337f71a3b18e",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "743c75ca-8e6a-46db-8bb7-172bad14f4b0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "4bf7d6e4-0a23-4f47-a28a-d586a134eb46",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "e03ace0d-3c7c-4375-9f23-f2fce8bc37bc",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouuse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "9452991b-c15a-441b-8196-8f894911b396",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouuse",
