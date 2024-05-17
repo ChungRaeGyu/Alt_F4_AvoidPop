@@ -4,10 +4,15 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RetryBtn : MonoBehaviour
+public class ResultBtnController : MonoBehaviour
 {
     public void Retry()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("SeongHoonScene");
+    }
+
+    public void ToMain()
+    {
+        SceneManager.LoadScene("Intro");
     }
 }
