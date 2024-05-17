@@ -6,10 +6,16 @@ using UnityEngine.InputSystem;
 
 public class CharacterController : MonoBehaviour
 {
-    public event Action<Vector2> onMoveEvent;
-
+    public event Action<Vector2> OnMoveEvent;
+    private PlayerInput playerinput;
+    private InputAction inputAction;
+    void Start(){
+        playerinput.currentActionMap= inputAction.actionMap;
+    }
     public void OnMove(InputAction.CallbackContext context){
         Vector2 direction = context.ReadValue<Vector2>().normalized;
-        onMoveEvent?.Invoke(direction);
+        Debug.Log(transform.name);
+        OnMoveEvent?.Invoke(direction);
+        
     }
 }

@@ -299,9 +299,9 @@ GameObject:
   - component: {fileID: 957428383929247111}
   - component: {fileID: 4459839184456515140}
   - component: {fileID: 3326544369116781733}
-  - component: {fileID: 249382118938190403}
   - component: {fileID: 4062388973125210018}
   - component: {fileID: 5625954726505475263}
+  - component: {fileID: 4564712501041907104}
   m_Layer: 6
   m_Name: Player1
   m_TagString: Untagged
@@ -318,7 +318,7 @@ Transform:
   m_GameObject: {fileID: 6327410768853777319}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -352,7 +352,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4459839184456515140
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 249382118938190403}
+      - m_Target: {fileID: 4564712501041907104}
         m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -439,23 +439,15 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 77c6a2c9-23ae-4baa-a6ba-afad80d31826
     m_ActionName: Player/Move[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 743c75ca-8e6a-46db-8bb7-172bad14f4b0
+    m_ActionName: Player2/Move[/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: KeyboardMouuse
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &249382118938190403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6327410768853777319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1daf2911df142894c8c579591e188fdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4062388973125210018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,3 +473,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 58010768289938517}
+--- !u!114 &4564712501041907104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327410768853777319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1daf2911df142894c8c579591e188fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

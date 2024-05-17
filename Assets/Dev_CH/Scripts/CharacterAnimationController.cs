@@ -12,7 +12,7 @@ public class CharacterAnimationController : AnimationController
 
     void Start()
     {
-        controller.onMoveEvent += Anim;
+        controller.OnMoveEvent += Anim;
     }
 
     private void Anim(Vector2 vector)
