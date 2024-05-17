@@ -225,7 +225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.01, y: 0}
   m_SizeDelta: {x: 8.75, y: 15.562501}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &143168210
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 649626579}
   - component: {fileID: 649626578}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: 2aud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 2
-  m_MaxPlayerCount: -1
+  m_MaxPlayerCount: 2
   m_AllowJoining: 1
   m_JoinBehavior: 0
   m_PlayerJoinedEvent:
@@ -684,7 +684,7 @@ MonoBehaviour:
       - m_Target: {fileID: 720303109}
         m_TargetAssemblyTypeName: GameManagerTest, Assembly-CSharp
         m_MethodName: OnButtonPlay1
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -697,18 +697,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_JoinAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 5b6080a2-d3e7-471c-8ebe-1affd40eedfe
+      m_Name: Join
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 1274704a-8acd-4ecc-8a72-3ee5fd3c7aa6
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 6327410768853777319, guid: b5981640e57014846a82aba2929305d3, type: 3}
+    m_Reference: {fileID: 7105806534090154389, guid: 5fdcde2b5a0909c4e90bc6d6776e413f, type: 3}
+  m_PlayerPrefab: {fileID: 6327410768853777319, guid: 67a04c21ed5463f46bc0da932bfc13f7, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -731,7 +731,7 @@ GameObject:
   - component: {fileID: 775480208}
   - component: {fileID: 775480207}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: 1aud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,10 +804,11 @@ MonoBehaviour:
       - m_Target: {fileID: 720303109}
         m_TargetAssemblyTypeName: GameManagerTest, Assembly-CSharp
         m_MethodName: OnButtonPlay1
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.InputSystem.PlayerInput,
+            Unity.InputSystem
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
