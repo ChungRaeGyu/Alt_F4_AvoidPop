@@ -17,6 +17,6 @@ public class StartBtn : MonoBehaviour
 
         DataManager.instance.userName = inputField.text;
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("SeongHoonScene");
     }
 }
