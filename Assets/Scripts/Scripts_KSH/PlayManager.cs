@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class PlayManager : MonoBehaviour
 {
-    [SerializeField] private Text CountDownText;
-    [SerializeField] private Text CurrentTimeText;
+    [SerializeField] private Text countDownText;
+    [SerializeField] private Text currentTimeText;
+    [SerializeField] private GameObject rain;
     private float countDown = 3f;
-    private float currentTime = 0f;
+    public float currentTime = 0f;
+    private float creationCycle = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +18,9 @@ public class PlayManager : MonoBehaviour
         // is2P인지 확인해서 세팅하기
         // 1p일때 : 2p 오브젝트 Destroy, 최고점수 불러오기
         // 2p일때 : 2p 오브젝트 살리기
+
+        // 임시
+        InvokeRepeating("CreateRain", 3f, creationCycle);
     }
 
     // Update is called once per frame
@@ -28,10 +33,10 @@ public class PlayManager : MonoBehaviour
         }
         else
         {
-            CountDownText.gameObject.SetActive(false);
-            CurrentTimeText.gameObject.SetActive(true);
+            countDownText.gameObject.SetActive(false);
+            currentTimeText.gameObject.SetActive(true);
             currentTime += Time.deltaTime;
-            CurrentTimeText.text = currentTime.ToString("N2");
+            currentTimeText.text = currentTime.ToString("N2");
         }
     }
 
@@ -39,15 +44,23 @@ public class PlayManager : MonoBehaviour
     {
         if(countDown >= 0f && countDown < 1f) 
         {
-            CountDownText.text = "1";
+            countDownText.text = "1";
         }
         else if(countDown >= 1f && countDown < 2f)
         {
-            CountDownText.text = "2";
+            countDownText.text = "2";
         }
         else if(countDown >= 2f && countDown <= 3f)
         {
-            CountDownText.text = "3";
+            countDownText.text = "3";
         }
+    }
+
+    private void CreateRain() // 임시
+    {
+        float x = Random.Range(-2.5f, 2.5f);
+        float y = 4.5f;
+        rain.transform.position = new Vector3(x, y, 0f);
+        Instantiate(rain);
     }
 }
