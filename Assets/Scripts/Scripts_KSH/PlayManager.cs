@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayManager : MonoBehaviour
 {
-    [SerializeField] private Text countDownText;
-    [SerializeField] private Text currentTimeText;
+    [SerializeField] private TMP_Text countDownText;
+    [SerializeField] private TMP_Text currentTimeText;
     [SerializeField] private GameObject rain;
     private float countDown = 3f;
     public float currentTime = 0f;
@@ -21,6 +22,7 @@ public class PlayManager : MonoBehaviour
 
         // юс╫ц
         InvokeRepeating("CreateRain", 3f, creationCycle);
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame

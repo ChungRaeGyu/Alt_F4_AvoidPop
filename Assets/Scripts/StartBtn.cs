@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartBtn : MonoBehaviour
 {
@@ -15,5 +16,7 @@ public class StartBtn : MonoBehaviour
         }
 
         DataManager.instance.userName = inputField.text;
+
+        SceneManager.LoadScene(1);
     }
 }
