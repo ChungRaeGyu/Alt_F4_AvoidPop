@@ -1087,7 +1087,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScoreText: {fileID: 1078016777}
+  bestScoreText: {fileID: 0}
   resultPanel: {fileID: 1472962450}
+  resultCurrentScoreText: {fileID: 0}
+  resultBestScoreText: {fileID: 0}
 --- !u!1 &808729659
 GameObject:
   m_ObjectHideFlags: 0
