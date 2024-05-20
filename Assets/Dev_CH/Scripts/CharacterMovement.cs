@@ -17,7 +17,7 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller.onMoveEvent += Move;
+        controller.OnMoveEvent += Move;
     }
 
     private void Move(Vector2 direction)
