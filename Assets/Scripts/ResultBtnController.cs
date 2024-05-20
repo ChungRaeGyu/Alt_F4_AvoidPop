@@ -6,13 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class ResultBtnController : MonoBehaviour
 {
+    public RankingManager rankingManager;
+
+    private void Start()
+    {
+        rankingManager = GetComponent<RankingManager>();
+    }
     public void Retry()
     {
-        SceneManager.LoadScene("SeongHoonScene");
+        rankingManager.AddRanking(DataManager.instance.userName, DataManager.instance.currentScore);
+        SceneManager.LoadScene("Main");
     }
 
     public void ToMain()
     {
+        rankingManager.AddRanking(DataManager.instance.userName, DataManager.instance.currentScore);
         SceneManager.LoadScene("Intro");
     }
 }

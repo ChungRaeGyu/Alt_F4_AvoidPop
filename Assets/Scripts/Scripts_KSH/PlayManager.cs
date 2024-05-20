@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class PlayManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text countDownText;
     [SerializeField] private TMP_Text currentTimeText;
     [SerializeField] private GameObject rain;
+    [SerializeField] private GameObject barrier;
     private float countDown = 3f;
     public float currentTime = 0f;
     private float creationCycle = 1f;
@@ -64,5 +66,11 @@ public class PlayManager : MonoBehaviour
         float y = 4.5f;
         rain.transform.position = new Vector3(x, y, 0f);
         Instantiate(rain);
+        
+        //Item»ý¼º
+        if(Random.Range(1, 6) % 5==2){
+            GameObject newBarrier = Instantiate(barrier);
+            newBarrier.transform.position = new Vector2(x,y);
+        }
     }
 }

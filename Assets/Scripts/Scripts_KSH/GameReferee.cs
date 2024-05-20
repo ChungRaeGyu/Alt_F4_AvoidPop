@@ -67,5 +67,6 @@ public class GameReferee : MonoBehaviour
         resultCurrentScoreText.text = currentScoreText.text;
         resultBestScoreText.text = bestScoreText.text;
         DataManager.instance.bestScore = bestScore;
+        DataManager.instance.currentScore = currentScore;
     }
 }
