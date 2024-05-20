@@ -13,6 +13,7 @@ public class barrierManager : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("Rain")){
             this.gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
     }
 }

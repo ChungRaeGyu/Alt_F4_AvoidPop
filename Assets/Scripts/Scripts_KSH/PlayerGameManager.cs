@@ -16,6 +16,7 @@ public class PlayerGameManager : MonoBehaviour
             referee.GameOver();
         }else if(collision.gameObject.CompareTag("Item")){
             barrier.SetActive(true);
+            Destroy(collision.gameObject);
         }
     }
 }
