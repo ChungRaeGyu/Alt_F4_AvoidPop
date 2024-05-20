@@ -881,6 +881,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340774321}
   m_CullTransparentMesh: 1
+--- !u!1 &376346742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8790160844283075029, guid: 33a2891603bd90b4f974f316352c3bcc, type: 3}
+  m_PrefabInstance: {fileID: 1645577890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &376346746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376346742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b62397434315a43b28249a78fcbebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &377394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +947,7 @@ MonoBehaviour:
   countDownText: {fileID: 340774323}
   currentTimeText: {fileID: 912868669}
   rain: {fileID: 5749944353181336924, guid: a2efb8c32905b3542a59c15704c329a3, type: 3}
+  barrier: {fileID: 5749944353181336924, guid: 0f5d7bdd524de2a43a944ae12306393f, type: 3}
   currentTime: 0
 --- !u!114 &377394803
 MonoBehaviour:
@@ -2963,7 +2981,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8790160844283075029, guid: 33a2891603bd90b4f974f316352c3bcc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 376346746}
   m_SourcePrefab: {fileID: 100100000, guid: 33a2891603bd90b4f974f316352c3bcc, type: 3}
 --- !u!1 &1711106050
 GameObject:
