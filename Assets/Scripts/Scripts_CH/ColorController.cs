@@ -17,14 +17,16 @@ public class ColorController : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        color myColor = (color)DataManager.instance.characterNum;
+        SetColor(myColor);
     }
-    public void SetColor(int num){
+    public void SetColor(color num){
         switch (num)
         {
-            case (int)color.Red: spriteRenderer.color = Color.red; break;
-            case (int)color.Blue: spriteRenderer.color = Color.blue; break;
-            case (int)color.Green: spriteRenderer.color = Color.green; break;
-            case (int)color.Yellow: spriteRenderer.color = Color.yellow; break;
+            case color.Red: spriteRenderer.color = Color.red; break;
+            case color.Blue: spriteRenderer.color = Color.blue; break;
+            case color.Green: spriteRenderer.color = Color.green; break;
+            case color.Yellow: spriteRenderer.color = Color.yellow; break;
         }
     }
 }
