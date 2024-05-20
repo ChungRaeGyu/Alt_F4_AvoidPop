@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "Join",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "e90129a4-eff9-4c52-89fc-e5b3071453e2",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Key",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -42,7 +42,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouuse",
+                    "groups": "KeyboardMouse",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -53,15 +53,15 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouuse",
+                    "groups": "KeyboardMouse",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "ba81a708-a3a7-44d7-88eb-396d60b5d5bf",
-                    "path": "",
+                    "id": "114d82be-9b19-46d1-be99-d2d650a3f4ed",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -73,12 +73,12 @@
         },
         {
             "name": "Player2",
-            "id": "05e9c267-ff10-4f05-893f-337f71a3b18e",
+            "id": "64d75d0f-b296-4b0e-9a2e-cb73be6b41c7",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "Move2",
                     "type": "Value",
-                    "id": "743c75ca-8e6a-46db-8bb7-172bad14f4b0",
+                    "id": "6b190700-e318-4c18-bfe9-9819ca55ca38",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -88,34 +88,34 @@
             "bindings": [
                 {
                     "name": "2D Vector",
-                    "id": "4bf7d6e4-0a23-4f47-a28a-d586a134eb46",
+                    "id": "8ea26974-4ffc-44d3-ab56-110e742831c3",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Move2",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "left",
-                    "id": "e03ace0d-3c7c-4375-9f23-f2fce8bc37bc",
+                    "id": "47bda06c-58c0-4255-bf05-f0d7eae90dc0",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouuse",
-                    "action": "Move",
+                    "groups": "",
+                    "action": "Move2",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "9452991b-c15a-441b-8196-8f894911b396",
+                    "id": "f231dcc6-17b5-419d-a50a-656b2ce343ae",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouuse",
-                    "action": "Move",
+                    "groups": "",
+                    "action": "Move2",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
@@ -124,8 +124,8 @@
     ],
     "controlSchemes": [
         {
-            "name": "KeyboardMouuse",
-            "bindingGroup": "KeyboardMouuse",
+            "name": "KeyboardMouse",
+            "bindingGroup": "KeyboardMouse",
             "devices": [
                 {
                     "devicePath": "<Keyboard>",

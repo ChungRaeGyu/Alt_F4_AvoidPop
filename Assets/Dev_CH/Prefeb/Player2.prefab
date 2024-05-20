@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3008911986659940587}
   - component: {fileID: 6748432433967913995}
   m_Layer: 5
-  m_Name: NickName
+  m_Name: NickName2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 1490283798236899081}
   - component: {fileID: 58010768289938517}
   - component: {fileID: 7293121056907815733}
+  - component: {fileID: 4322205448403016813}
   m_Layer: 6
   m_Name: MainImage
   m_TagString: Untagged
@@ -153,12 +154,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -476004522, guid: 74829f471e3f5004fb84bc3336cab416, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_Sprite: {fileID: -74775942, guid: 78d479dee49cd404b86a4d53ff2bddba, type: 3}
+  m_Color: {r: 0.418, g: 0.603, b: 0.702, a: 1}
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.11, y: 0.29}
+  m_Size: {x: 0.22, y: 0.58}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -185,6 +186,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4322205448403016813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241939944256347742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4970af9e4b189d641a271f0746fcd68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3918209043834947145
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,10 +311,10 @@ GameObject:
   - component: {fileID: 2258682001122825542}
   - component: {fileID: 957428383929247111}
   - component: {fileID: 4459839184456515140}
-  - component: {fileID: 249382118938190403}
+  - component: {fileID: 3326544369116781733}
   - component: {fileID: 4062388973125210018}
   - component: {fileID: 5625954726505475263}
-  - component: {fileID: 1697130359899404915}
+  - component: {fileID: 4564712501041907104}
   m_Layer: 6
   m_Name: Player2
   m_TagString: Untagged
@@ -318,7 +331,7 @@ Transform:
   m_GameObject: {fileID: 6327410768853777319}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -3, z: 0}
+  m_LocalPosition: {x: -0.5, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -398,7 +411,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16711524, y: 0.5774335}
   m_EdgeRadius: 0
---- !u!114 &249382118938190403
+--- !u!114 &3326544369116781733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -407,9 +420,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 6327410768853777319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1daf2911df142894c8c579591e188fdc, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c0ec54f4eef5c6745b99a6f06587a73c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4564712501041907104}
+        m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f9c8a8ff-66b1-455e-b7ec-9ef03d2060e8
+    m_ActionName: Player2/Move2[/Keyboard/leftArrow,/Keyboard/rightArrow]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Player2
+  m_DefaultActionMap: Player2
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &4062388973125210018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 58010768289938517}
---- !u!114 &1697130359899404915
+--- !u!114 &4564712501041907104
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -444,44 +491,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 6327410768853777319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 1daf2911df142894c8c579591e188fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 5fdcde2b5a0909c4e90bc6d6776e413f, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 77c6a2c9-23ae-4baa-a6ba-afad80d31826
-    m_ActionName: Player1/Move[/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 249382118938190403}
-        m_TargetAssemblyTypeName: CharacterController, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 743c75ca-8e6a-46db-8bb7-172bad14f4b0
-    m_ActionName: Player2/Move[/Keyboard/leftArrow,/Keyboard/rightArrow]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: KeyboardMouuse
-  m_DefaultActionMap: Player2
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  inputAsset: {fileID: 0}
+  player:
+    m_Name: Player
+    m_Id: 83c97ec3-a24b-4bb5-b5ed-45a04e10d67b
+    m_Asset: {fileID: 0}
+    m_Actions: []
+    m_Bindings: []
+  move:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c1621936-f22a-475e-86b6-da3bb10e4b8e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0

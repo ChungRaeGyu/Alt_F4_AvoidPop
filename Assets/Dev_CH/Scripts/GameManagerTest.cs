@@ -17,18 +17,22 @@ public class GameManagerTest : MonoBehaviour
     // Start is called before the first frame update
     public event Action<PlayerInput> onPlayerJoined;
     CharacterController characterController;
+    ColorController colorController;
     private void Start() {
         characterController = GameObject.FindObjectOfType<CharacterController>();
         playerInputManager = GetComponent<PlayerInputManager>();
+        colorController = GameObject.FindObjectOfType<ColorController>();
     }
-    public void OnButtonPlay1(PlayerInput playerInput)
+    public void OnButtonPlay1()
     {
-        //playerInputManager.EnableJoining();
         //Instantiate(player1);
     }
     public void OnButtonPlay2()
     {
         //OnButtonPlay1();
         Instantiate(player2);
+    }
+    public void OnPlayerJoined(PlayerInput playerInput){
+        Debug.Log(playerInput.playerIndex + "2번");
     }
 }
