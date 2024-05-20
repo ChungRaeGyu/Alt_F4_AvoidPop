@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
-
     public string userName;
     public int bestScore;
     public int characterNum;

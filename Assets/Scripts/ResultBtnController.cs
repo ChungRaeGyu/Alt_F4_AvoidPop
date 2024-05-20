@@ -8,7 +8,7 @@ public class ResultBtnController : MonoBehaviour
 {
     public void Retry()
     {
-        SceneManager.LoadScene("SeongHoonScene");
+        SceneManager.LoadScene("Main");
     }
 
     public void ToMain()

@@ -315,6 +315,7 @@ GameObject:
   - component: {fileID: 4062388973125210018}
   - component: {fileID: 5625954726505475263}
   - component: {fileID: 4564712501041907104}
+  - component: {fileID: 1351056112148436680}
   m_Layer: 6
   m_Name: Player1
   m_TagString: Untagged
@@ -454,14 +455,14 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 743c75ca-8e6a-46db-8bb7-172bad14f4b0
-    m_ActionName: Player2/Move[/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: e90129a4-eff9-4c52-89fc-e5b3071453e2
     m_ActionName: Player1/Join
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6b190700-e318-4c18-bfe9-9819ca55ca38
+    m_ActionName: Player2/Move2[/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: KeyboardMouuse
+  m_DefaultControlScheme: KeyboardMouse
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -502,19 +503,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1daf2911df142894c8c579591e188fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputAsset: {fileID: 0}
-  player:
-    m_Name: Player
-    m_Id: 83c97ec3-a24b-4bb5-b5ed-45a04e10d67b
-    m_Asset: {fileID: 0}
-    m_Actions: []
-    m_Bindings: []
-  move:
-    m_Name: Move
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c1621936-f22a-475e-86b6-da3bb10e4b8e
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
+  nicknameInput: {fileID: 6748432433967913995}
+--- !u!114 &1351056112148436680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327410768853777319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22dfc4cc146670946ab0393336f80867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
