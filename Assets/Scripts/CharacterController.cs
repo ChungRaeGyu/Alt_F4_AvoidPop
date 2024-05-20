@@ -11,6 +11,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] Text nicknameInput;
     void Start(){
         nicknameInput.text = DataManager.instance.userName;
+        // TODO:캐릭터의 색정해주기
     }
     public void OnMove(InputAction.CallbackContext context){
         Vector2 direction = context.ReadValue<Vector2>().normalized;
