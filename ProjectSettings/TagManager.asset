@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Rain
   - Ground
+  - Item
   layers:
   - Default
   - TransparentFX

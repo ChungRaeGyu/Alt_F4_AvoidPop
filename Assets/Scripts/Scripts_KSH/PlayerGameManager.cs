@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerGameManager : MonoBehaviour
 {
     private GameReferee referee;
-
+    [SerializeField] GameObject barrier;
     private void Start()
     {
         referee = FindObjectOfType<GameReferee>();
@@ -14,6 +14,8 @@ public class PlayerGameManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Rain"))
         {
             referee.GameOver();
+        }else if(collision.gameObject.CompareTag("Item")){
+            barrier.SetActive(true);
         }
     }
 }

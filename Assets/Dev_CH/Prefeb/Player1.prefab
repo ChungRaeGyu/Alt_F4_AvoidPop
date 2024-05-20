@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 1351056112148436680}
   m_Layer: 6
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,7 +462,7 @@ MonoBehaviour:
     m_ActionId: 6b190700-e318-4c18-bfe9-9819ca55ca38
     m_ActionName: Player2/Move2[/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: KeyboardMouse
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
