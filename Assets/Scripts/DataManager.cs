@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DataManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class DataManager : MonoBehaviour
 
     public string userName;
     public int bestScore;
+    public int characterNum;
 
     private void Awake()
     {
