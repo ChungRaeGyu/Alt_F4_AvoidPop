@@ -4,10 +4,8 @@ public class PlayerGameManager : MonoBehaviour
 {
     private GameReferee referee;
     [SerializeField] GameObject barrier;
-    private ObjectPool objectPool;
     private void Start()
     {
-        objectPool = FindObjectOfType<ObjectPool>();
         referee = FindObjectOfType<GameReferee>();
     }
 
