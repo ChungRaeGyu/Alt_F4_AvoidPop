@@ -1438,7 +1438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &649813346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1804,7 +1804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &912868668
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2740,8 +2740,11 @@ MonoBehaviour:
   player1: {fileID: 6327410768853777319, guid: 33a2891603bd90b4f974f316352c3bcc, type: 3}
   player2: {fileID: 6327410768853777319, guid: b5981640e57014846a82aba2929305d3, type: 3}
   resultPanel: {fileID: 2009919315}
+  player1Win: {fileID: 0}
+  player2Win: {fileID: 0}
   resultCurrentScoreText: {fileID: 1415588280}
   resultBestScoreText: {fileID: 311586640}
+  WinText: {fileID: 0}
 --- !u!4 &1388176074
 Transform:
   m_ObjectHideFlags: 0
