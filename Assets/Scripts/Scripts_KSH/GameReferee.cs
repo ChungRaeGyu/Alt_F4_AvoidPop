@@ -63,7 +63,7 @@ public class GameReferee : MonoBehaviour
                 currentScoreText.text = currentScore.ToString();
                 if (currentScore >= bestScore) 
                 {
-                    if(bestRecord.gameObject.active == false)
+                    if(bestRecord.gameObject.activeSelf == false)
                     {
                         bestRecord.gameObject.SetActive(true);
                     }
