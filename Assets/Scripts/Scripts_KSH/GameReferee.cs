@@ -25,6 +25,8 @@ public class GameReferee : MonoBehaviour
 
     // resultPanel
     public GameObject resultPanel;
+    public GameObject player1Win;
+    public GameObject player2Win;
     [SerializeField] private TMP_Text resultCurrentScoreText;
     [SerializeField] private TMP_Text resultBestScoreText;
 
