@@ -6,46 +6,39 @@ public class ObjectSpawner : MonoBehaviour
 {
     public ObjectPool objectPool;
     public float spawnInterval = 1f;
-    public float spawnHeight = 5f;
-    public float spawnRangeX = 2f;
-    bool isFirst = true;
-    public float gameTime = -3f;
+    public float spawnHeight = 10f;
+    public float spawnRangeX = 5f;
+    public float initialDelay = 3f; // 초기 지연 시간
 
     private float timeSinceLastSpawn;
+    private bool spawningStarted = false; // 스폰 시작 여부 확인
+
+    void Start()
+    {
+        // 초기 지연 시간 동안 대기
+        Invoke("StartSpawning", initialDelay);
+    }
+
 
     void Update()
     {
-        if (isFirst == true)
+        if (spawningStarted)
         {
-            spawnInterval = 3f;
+            timeSinceLastSpawn += Time.deltaTime;
+
             if (timeSinceLastSpawn >= spawnInterval)
             {
                 SpawnObject();
                 timeSinceLastSpawn = 0f;
-                spawnInterval = 1f;
-                isFirst = false;
             }
         }
-        timeSinceLastSpawn += Time.deltaTime;
-        gameTime += Time.deltaTime;
-        if (timeSinceLastSpawn >= spawnInterval && isFirst == false)
-        {
-            SpawnObject();
-            timeSinceLastSpawn = 0f;
-        }
-        if(gameTime > 30f && gameTime <= 60f)
-        {
-            spawnInterval = 0.75f;
-        }
-        else if(gameTime > 60f && gameTime <= 90f)
-        {
-            spawnInterval = 0.5f;
-        }
-        else if(gameTime > 90f)
-        {
-            spawnInterval = 0.25f;
-        }
     }
+
+    void StartSpawning()
+    {
+        spawningStarted = true; // 스폰 시작
+    }
+
 
     void SpawnObject()
     {

@@ -4,69 +4,45 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public GameObject objectPrefab;
-    [SerializeField] GameObject itemPrefab;
+    public GameObject[] objectPrefabs; // 여러 프리팹을 저장할 배열
     public int initialPoolSize = 10;
 
-    private Queue<GameObject> pool = new Queue<GameObject>();
-    private Queue<GameObject> itemPool = new Queue<GameObject>();
+    private List<GameObject> pool = new List<GameObject>();
 
     void Start()
     {
         // 초기 오브젝트 풀 생성
-        for (int i = 0; i < initialPoolSize; i++)
+        foreach (var prefab in objectPrefabs)
         {
-            InitializePool(objectPrefab,pool);
-            InitializePool(itemPrefab, itemPool);
+            for (int i = 0; i < initialPoolSize; i++)
+            {
+                GameObject obj = Instantiate(prefab);
+                obj.SetActive(false);
+                pool.Add(obj);
+            }
         }
-    }
-
-    private GameObject InitializePool(GameObject Prefab, Queue<GameObject> Pool)
-    {
-        GameObject obj = Instantiate(Prefab);
-        obj.SetActive(false);
-        Pool.Enqueue(obj);
-        return obj;
     }
 
     public GameObject GetObject()
     {
-        bool Persent = Random.Range(1, 6) % 5 == 1;
-        if (Persent)
+        foreach (GameObject obj in pool)
         {
-            return GetPool(itemPool);
-        }
-        else
-        {
-            if (pool.Count > 0)
+            if (!obj.activeInHierarchy)
             {
-                return GetPool(pool);
-            }
-            else
-            {
-                return InitializePool(objectPrefab, pool);
+                obj.SetActive(true);
+                return obj;
             }
         }
 
-    }
-
-    private GameObject GetPool(Queue<GameObject> Pool)
-    {
-        GameObject obj = Pool.Dequeue();
-        obj.SetActive(true);
-        return obj;
+        // 모든 오브젝트가 사용 중일 경우, 랜덤 프리팹으로 새 오브젝트 생성
+        GameObject newObj = Instantiate(objectPrefabs[Random.Range(0, objectPrefabs.Length)]);
+        newObj.SetActive(false);
+        pool.Add(newObj);
+        return newObj;
     }
 
     public void ReturnObject(GameObject obj)
     {
         obj.SetActive(false);
-        if (obj.name== "TestObject(Clone)"){
-            pool.Enqueue(obj);
-            Debug.Log("돌아옴");
-        }
-            
-        else
-            itemPool.Enqueue(obj);
-        
     }
 }
