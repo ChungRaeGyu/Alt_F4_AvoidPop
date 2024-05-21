@@ -40,17 +40,17 @@ public class GameReferee : MonoBehaviour
         {
             bestScore = DataManager.instance.bestScore;
         }
-        if (bestScore != 0)
-        {
-            bestScoreText.text = bestScore.ToString();
-        }
+        
         if(DataManager.instance.LoacalPlay){
             Instantiate(player1);
             Instantiate(player2);
         }else{
             Instantiate(player1);
-        }
-            
+            if (bestScore != 0)
+            {
+                bestScoreText.text = bestScore.ToString();
+            }
+        }  
     }
 
     // Update is called once per frame
@@ -62,18 +62,21 @@ public class GameReferee : MonoBehaviour
         }
         else
         {
-            currentScore = 3 * (int)playManager.currentTime;
-            if(currentScore > 0)
+            if (!DataManager.instance.LoacalPlay)
             {
-                currentScoreText.text = currentScore.ToString();
-                if (currentScore >= bestScore) 
+                currentScore = 3 * (int)playManager.currentTime;
+                if (currentScore > 0)
                 {
-                    if(bestRecord.gameObject.active == false)
+                    currentScoreText.text = currentScore.ToString();
+                    if (currentScore >= bestScore)
                     {
-                        bestRecord.gameObject.SetActive(true);
+                        if (bestRecord.gameObject.active == false)
+                        {
+                            bestRecord.gameObject.SetActive(true);
+                        }
+                        bestScore = currentScore;
+                        bestScoreText.text = currentScore.ToString();
                     }
-                    bestScore = currentScore;
-                    bestScoreText.text = currentScore.ToString();
                 }
             }
         }

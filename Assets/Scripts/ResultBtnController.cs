@@ -18,9 +18,17 @@ public class ResultBtnController : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
+    public void RetryAtLocal()
+    {
+        SceneManager.LoadScene("2pMain");
+    }
     public void ToMain()
     {
         rankingManager.AddRanking(DataManager.instance.userName, DataManager.instance.currentScore);
+        SceneManager.LoadScene("Intro");
+    }
+    public void ToMainAtLocal()
+    {
         SceneManager.LoadScene("Intro");
     }
 }
