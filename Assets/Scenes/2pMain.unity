@@ -2064,7 +2064,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 377394803}
         m_TargetAssemblyTypeName: ResultBtnController, Assembly-CSharp
-        m_MethodName: Retry
+        m_MethodName: Retry2PMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
