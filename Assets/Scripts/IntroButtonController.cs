@@ -24,7 +24,7 @@ public class IntroButtonController : MonoBehaviour
     public void LocalStartBtn()
     {
         DataManager.instance.LoacalPlay = true;
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("2pMain");
     }
 
     public void RankingBtn()
