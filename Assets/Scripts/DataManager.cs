@@ -9,6 +9,7 @@ public class DataManager : MonoBehaviour
     public string userName;
     public int bestScore;
     public int characterNum;
+    public int characterNum2;
     public int currentScore;
     public List<Ranking> rankingList = new List<Ranking>();
 

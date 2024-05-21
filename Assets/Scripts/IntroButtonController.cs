@@ -20,12 +20,24 @@ public class IntroButtonController : MonoBehaviour
 
         SceneManager.LoadScene("Main");
     }
+
+    public void LocalStartBtn()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
     public void RankingBtn()
     {
         rankingPanel.SetActive(true);
     }
+
     public void CloseRankingPanelBtn()
     {
         rankingPanel.SetActive(false);
+    }
+
+    public void ContinueBtn()
+    {
+        SceneManager.LoadScene("2p");
     }
 }
