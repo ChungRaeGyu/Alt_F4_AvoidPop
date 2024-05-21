@@ -37,7 +37,7 @@ public class RankingManager : MonoBehaviour
             rankingText.text = "";
             for(int i = 0; i<Mathf.Min(5, DataManager.instance.rankingList.Count); i++)
             {
-                rankingText.text += $"{DataManager.instance.rankingList[i].name}\t{DataManager.instance.rankingList[i].score}\n";
+                rankingText.text += $"{i + 1}. {DataManager.instance.rankingList[i].name} - {DataManager.instance.rankingList[i].score}\n";
             }
         }
     }
