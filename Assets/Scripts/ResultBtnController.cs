@@ -17,9 +17,7 @@ public class ResultBtnController : MonoBehaviour
         rankingManager.AddRanking(DataManager.instance.userName, DataManager.instance.currentScore);
         SceneManager.LoadScene("Main");
     }
-    public void Retry2pMain(){
-        SceneManager.LoadScene("2pMain");
-    }
+
     public void ToMain()
     {
         rankingManager.AddRanking(DataManager.instance.userName, DataManager.instance.currentScore);

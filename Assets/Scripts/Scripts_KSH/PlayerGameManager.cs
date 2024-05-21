@@ -8,10 +8,8 @@ public class PlayerGameManager : MonoBehaviour
     [SerializeField] GameObject barrier;
     [SerializeField] AudioSource audioSource;
     [SerializeField] TMP_Text WinText;
-
-    private void Awake(){
-        if (DataManager.instance.LoacalPlay)
-            WinText = GameObject.Find("WinText").GetComponent<TMP_Text>();
+    private void Start()
+    {
         referee = FindObjectOfType<GameReferee>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -25,7 +23,8 @@ public class PlayerGameManager : MonoBehaviour
             string whoWin=null;
             if (localCheck)
             {
-                whoWin = transform.name == "Player1(Clone)" ?
+                WinText = GameObject.Find("WinText").GetComponent<TMP_Text>();
+                whoWin = collision.gameObject.name == "Player1(Clone)" ?
                 "2번플레이어가 승리했습니다." : "1번플레이어가 승리했습니다.";
             }
             referee.GameOver(whoWin);
