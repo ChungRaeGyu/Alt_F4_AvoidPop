@@ -4,9 +4,11 @@ public class PlayerGameManager : MonoBehaviour
 {
     private GameReferee referee;
     [SerializeField] GameObject barrier;
+    [SerializeField] AudioSource audioSource;
     private void Start()
     {
         referee = FindObjectOfType<GameReferee>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -17,6 +19,7 @@ public class PlayerGameManager : MonoBehaviour
             referee.GameOver();
         }else if(collision.gameObject.CompareTag("Item")){
             barrier.SetActive(true);
+            audioSource.Play();
         }
     }
 }

@@ -10,6 +10,7 @@ public class GameReferee : MonoBehaviour
     // scorePanel
     [SerializeField] private TMP_Text currentScoreText;
     [SerializeField] private TMP_Text bestScoreText;
+    [SerializeField] private Image bestRecord;
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
     
@@ -62,6 +63,10 @@ public class GameReferee : MonoBehaviour
                 currentScoreText.text = currentScore.ToString();
                 if (currentScore >= bestScore) 
                 {
+                    if(bestRecord.gameObject.active == false)
+                    {
+                        bestRecord.gameObject.SetActive(true);
+                    }
                     bestScore = currentScore;
                     bestScoreText.text = currentScore.ToString();
                 }
