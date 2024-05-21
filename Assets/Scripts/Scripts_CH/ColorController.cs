@@ -19,7 +19,7 @@ public class ColorController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         
         myColor=transform.parent.name == 
-        "Player1" ? (color)DataManager.instance.characterNum : (color)DataManager.instance.characterNum2;
+        "Player1(Clone)" ? (color)DataManager.instance.characterNum : (color)DataManager.instance.characterNum2;
         
         SetColor(myColor);
 
