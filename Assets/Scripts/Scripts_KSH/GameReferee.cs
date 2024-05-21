@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameReferee : MonoBehaviour
 {
@@ -63,7 +64,7 @@ public class GameReferee : MonoBehaviour
                 currentScoreText.text = currentScore.ToString();
                 if (currentScore >= bestScore) 
                 {
-                    if(bestRecord.gameObject.activeSelf == false)
+                    if(bestRecord.gameObject.active == false)
                     {
                         bestRecord.gameObject.SetActive(true);
                     }
