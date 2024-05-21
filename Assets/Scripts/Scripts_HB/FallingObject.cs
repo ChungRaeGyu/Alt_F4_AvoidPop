@@ -22,7 +22,6 @@ public class FallingObject : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log(collision.gameObject.name + "");
             // 오브젝트를 풀에 반환
             objectPool.ReturnObject(gameObject);
         }

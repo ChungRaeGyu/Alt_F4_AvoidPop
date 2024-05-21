@@ -10,10 +10,12 @@ public class barrierManager : MonoBehaviour
         objectPool =FindObjectOfType<ObjectPool>();
         this.gameObject.SetActive(false);
     }
-    
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Rain")){
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Rain"))
+        {
             this.gameObject.SetActive(false);
+            objectPool.ReturnObject(other.gameObject);
         }
     }
 }
