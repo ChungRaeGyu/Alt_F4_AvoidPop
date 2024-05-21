@@ -13,7 +13,6 @@ public class PlayManager : MonoBehaviour
     [SerializeField] private GameObject barrier;
     private float countDown = 3f;
     public float currentTime = 0f;
-    private float creationCycle = 1f;
     
     // Start is called before the first frame update
     void Start()
@@ -21,9 +20,6 @@ public class PlayManager : MonoBehaviour
         // is2P인지 확인해서 세팅하기
         // 1p일때 : 2p 오브젝트 Destroy, 최고점수 불러오기
         // 2p일때 : 2p 오브젝트 살리기
-
-        // 임시
-        //InvokeRepeating("CreateRain", 3f, creationCycle);
         Time.timeScale = 1.0f;
     }
 
@@ -57,20 +53,6 @@ public class PlayManager : MonoBehaviour
         else if(countDown >= 2f && countDown <= 3f)
         {
             countDownText.text = "3";
-        }
-    }
-
-    private void CreateRain() // 임시
-    {
-        float x = Random.Range(-2.5f, 2.5f);
-        float y = 4.5f;
-        rain.transform.position = new Vector3(x, y, 0f);
-        Instantiate(rain);
-        
-        //Item생성
-        if(Random.Range(1, 6) % 5==2){
-            GameObject newBarrier = Instantiate(barrier);
-            newBarrier.transform.position = new Vector2(x,y);
         }
     }
 }
