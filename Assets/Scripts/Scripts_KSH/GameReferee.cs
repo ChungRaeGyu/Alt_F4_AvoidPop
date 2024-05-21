@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class GameReferee : MonoBehaviour
 {
@@ -25,11 +26,15 @@ public class GameReferee : MonoBehaviour
 
     // resultPanel
     public GameObject resultPanel;
+    public GameObject player1Win;
+    public GameObject player2Win;
     [SerializeField] private TMP_Text resultCurrentScoreText;
     [SerializeField] private TMP_Text resultBestScoreText;
+    [SerializeField] private TMP_Text WinText;
 
     private void Start()
     {
+        resultPanel.SetActive(false);
         playManager = FindObjectOfType<PlayManager>();
         if(DataManager.instance != null)
         {
@@ -57,28 +62,46 @@ public class GameReferee : MonoBehaviour
         }
         else
         {
-            currentScore = 3 * (int)playManager.currentTime;
-            if(currentScore > 0)
-            {
-                currentScoreText.text = currentScore.ToString();
-                if (currentScore >= bestScore) 
+            if(!DataManager.instance.LoacalPlay){
+                currentScore = 3 * (int)playManager.currentTime;
+                if (currentScore > 0)
                 {
-                    if(bestRecord.gameObject.activeSelf == false)
+                    currentScoreText.text = currentScore.ToString();
+                    if (currentScore >= bestScore)
                     {
-                        bestRecord.gameObject.SetActive(true);
+                        if (bestRecord.gameObject.active == false)
+                        {
+                            bestRecord.gameObject.SetActive(true);
+                        }
+                        bestScore = currentScore;
+                        bestScoreText.text = currentScore.ToString();
                     }
-                    bestScore = currentScore;
-                    bestScoreText.text = currentScore.ToString();
                 }
             }
+
         }
     }
 
-    public void GameOver()
+    public void GameOver(string whoWin)
     {
         isEnd = true;
         Time.timeScale = 0.0f;
         resultPanel.SetActive(true);
+        if(whoWin!=null)
+            LocalSetting(whoWin);
+        else
+            ScoreSetting();
+    }
+
+    private void LocalSetting(string who)
+    {
+        WinText.text = who;
+        WinText.gameObject.SetActive(true);
+    
+    }
+
+    private void ScoreSetting()
+    {
         resultCurrentScoreText.text = currentScoreText.text;
         resultBestScoreText.text = bestScoreText.text;
         DataManager.instance.bestScore = bestScore;
