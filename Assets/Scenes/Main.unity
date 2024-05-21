@@ -930,6 +930,7 @@ MonoBehaviour:
   countDownText: {fileID: 340774323}
   currentTimeText: {fileID: 912868669}
   rain: {fileID: 5749944353181336924, guid: a2efb8c32905b3542a59c15704c329a3, type: 3}
+  barrier: {fileID: 5749944353181336924, guid: 0f5d7bdd524de2a43a944ae12306393f, type: 3}
   currentTime: 0
 --- !u!114 &377394803
 MonoBehaviour:
@@ -2916,6 +2917,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1351056112148436680, guid: 33a2891603bd90b4f974f316352c3bcc, type: 3}
+      propertyPath: barrier
+      value: 
+      objectReference: {fileID: 5749944353181336924, guid: 0f5d7bdd524de2a43a944ae12306393f, type: 3}
     - target: {fileID: 2258682001122825542, guid: 33a2891603bd90b4f974f316352c3bcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
