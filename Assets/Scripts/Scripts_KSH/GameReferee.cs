@@ -34,23 +34,23 @@ public class GameReferee : MonoBehaviour
 
     private void Start()
     {
-        resultPanel.SetActive(false);
         playManager = FindObjectOfType<PlayManager>();
-        if(DataManager.instance != null)
-        {
-            bestScore = DataManager.instance.bestScore;
-        }
-        if (bestScore != 0)
-        {
-            bestScoreText.text = bestScore.ToString();
-        }
         if(DataManager.instance.LoacalPlay){
             Instantiate(player1);
             Instantiate(player2);
         }else{
             Instantiate(player1);
+            if (DataManager.instance != null)
+            {
+                bestScore = DataManager.instance.bestScore;
+            }
+            if (bestScore != 0)
+            {
+                bestScoreText.text = bestScore.ToString();
+            }
         }
-            
+        resultPanel.SetActive(false);
+
     }
 
     // Update is called once per frame

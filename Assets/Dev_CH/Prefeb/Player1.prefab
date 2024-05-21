@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Player1
 --- !u!1 &2241939944256347742
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 8790160844283075029}
   audioSource: {fileID: 21200854166597611}
+  WinText: {fileID: 0}
 --- !u!82 &21200854166597611
 AudioSource:
   m_ObjectHideFlags: 0
