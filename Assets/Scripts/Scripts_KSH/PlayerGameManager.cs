@@ -7,11 +7,12 @@ public class PlayerGameManager : MonoBehaviour
     private GameReferee referee;
     [SerializeField] GameObject barrier;
     [SerializeField] AudioSource audioSource;
-    [SerializeField] TMP_Text WinText;
+    //[SerializeField] TMP_Text WinText;
     private void Start()
     {
         referee = FindObjectOfType<GameReferee>();
         audioSource = GetComponent<AudioSource>();
+        //WinText = GetComponent<TMP_Text>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,9 +24,8 @@ public class PlayerGameManager : MonoBehaviour
             string whoWin=null;
             if (localCheck)
             {
-                WinText = GameObject.Find("WinText").GetComponent<TMP_Text>();
-                whoWin = collision.gameObject.name == "Player1(Clone)" ?
-                "2번플레이어가 승리했습니다." : "1번플레이어가 승리했습니다.";
+                whoWin = gameObject.name == "Player1(Clone)" ?
+                "2P 플레이어 승리!" : "1P 플레이어 승리!";
             }
             referee.GameOver(whoWin);
         }else if(collision.gameObject.CompareTag("Item")){
