@@ -11,6 +11,7 @@ public class DataManager : MonoBehaviour
     public int characterNum;
     public int characterNum2;
     public int currentScore;
+    public bool LoacalPlay;
     public List<Ranking> rankingList = new List<Ranking>();
 
     private void Awake()

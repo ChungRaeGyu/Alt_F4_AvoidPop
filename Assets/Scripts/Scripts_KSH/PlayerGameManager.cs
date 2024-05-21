@@ -4,8 +4,10 @@ public class PlayerGameManager : MonoBehaviour
 {
     private GameReferee referee;
     [SerializeField] GameObject barrier;
+    private ObjectPool objectPool;
     private void Start()
     {
+        objectPool = FindObjectOfType<ObjectPool>();
         referee = FindObjectOfType<GameReferee>();
     }
 
@@ -13,10 +15,10 @@ public class PlayerGameManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Rain"))
         {
+            Debug.Log("부딪힘");
             referee.GameOver();
         }else if(collision.gameObject.CompareTag("Item")){
             barrier.SetActive(true);
-            Destroy(collision.gameObject);
         }
     }
 }

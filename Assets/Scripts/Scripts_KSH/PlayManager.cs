@@ -23,7 +23,7 @@ public class PlayManager : MonoBehaviour
         // 2p일때 : 2p 오브젝트 살리기
 
         // 임시
-        InvokeRepeating("CreateRain", 3f, creationCycle);
+        //InvokeRepeating("CreateRain", 3f, creationCycle);
         Time.timeScale = 1.0f;
     }
 

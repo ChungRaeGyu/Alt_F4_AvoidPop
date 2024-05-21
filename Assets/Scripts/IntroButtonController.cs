@@ -17,12 +17,13 @@ public class IntroButtonController : MonoBehaviour
         }
 
         DataManager.instance.userName = inputField.text;
-
+        DataManager.instance.LoacalPlay = false;
         SceneManager.LoadScene("Main");
     }
 
     public void LocalStartBtn()
     {
+        DataManager.instance.LoacalPlay = true;
         SceneManager.LoadScene("Main");
     }
 

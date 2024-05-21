@@ -6,8 +6,8 @@ public class ObjectSpawner : MonoBehaviour
 {
     public ObjectPool objectPool;
     public float spawnInterval = 1f;
-    public float spawnHeight = 10f;
-    public float spawnRangeX = 5f;
+    public float spawnHeight = 5f;
+    public float spawnRangeX = 2f;
 
     private float timeSinceLastSpawn;
 

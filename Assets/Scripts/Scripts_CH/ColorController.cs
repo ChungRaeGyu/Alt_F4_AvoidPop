@@ -17,8 +17,12 @@ public class ColorController : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        color myColor = (color)DataManager.instance.characterNum;
+        
+        myColor=transform.parent.name == 
+        "Player1" ? (color)DataManager.instance.characterNum : (color)DataManager.instance.characterNum2;
+        
         SetColor(myColor);
+
     }
     public void SetColor(color num){
         switch (num)

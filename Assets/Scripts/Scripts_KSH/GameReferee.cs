@@ -10,6 +10,9 @@ public class GameReferee : MonoBehaviour
     // scorePanel
     [SerializeField] private TMP_Text currentScoreText;
     [SerializeField] private TMP_Text bestScoreText;
+    [SerializeField] private GameObject player1;
+    [SerializeField] private GameObject player2;
+    
     private PlayManager playManager;
 
     // inGameInfo
@@ -35,6 +38,13 @@ public class GameReferee : MonoBehaviour
         {
             bestScoreText.text = bestScore.ToString();
         }
+        if(DataManager.instance.LoacalPlay){
+            Instantiate(player1);
+            Instantiate(player2);
+        }else{
+            Instantiate(player1);
+        }
+            
     }
 
     // Update is called once per frame

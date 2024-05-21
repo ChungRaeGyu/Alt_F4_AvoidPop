@@ -15,7 +15,6 @@ public class CharacterController : MonoBehaviour
     }
     public void OnMove(InputAction.CallbackContext context){
         Vector2 direction = context.ReadValue<Vector2>().normalized;
-        Debug.Log(transform.name);
         OnMoveEvent?.Invoke(direction);
     }
 }

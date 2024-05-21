@@ -439,6 +439,7 @@ MonoBehaviour:
   userName: 
   bestScore: 0
   characterNum: 0
+  characterNum2: 0
   currentScore: 0
 --- !u!1 &483847209
 GameObject:
@@ -1204,6 +1205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 1962114225}
   rankingPanel: {fileID: 2067778284}
+  Player1: {fileID: 6327410768853777319, guid: 33a2891603bd90b4f974f316352c3bcc, type: 3}
+  Player2: {fileID: 6327410768853777319, guid: b5981640e57014846a82aba2929305d3, type: 3}
 --- !u!114 &990516443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,6 +1223,8 @@ MonoBehaviour:
   - {fileID: -476004522, guid: 74829f471e3f5004fb84bc3336cab416, type: 3}
   - {fileID: 21300000, guid: 6ad61a5f6ebbb6b4490f4e5650c0bd65, type: 3}
   chooseCharacter: {fileID: 1104798689}
+  character2: []
+  chooseCharacter2: {fileID: 0}
 --- !u!114 &990516444
 MonoBehaviour:
   m_ObjectHideFlags: 0
