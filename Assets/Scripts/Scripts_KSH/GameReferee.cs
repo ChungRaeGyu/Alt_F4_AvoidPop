@@ -36,18 +36,19 @@ public class GameReferee : MonoBehaviour
     {
         resultPanel.SetActive(false);
         playManager = FindObjectOfType<PlayManager>();
-        if(DataManager.instance != null)
-        {
-            bestScore = DataManager.instance.bestScore;
-        }
-        if (bestScore != 0)
-        {
-            bestScoreText.text = bestScore.ToString();
-        }
-        if(DataManager.instance.LoacalPlay){
+
+        if (DataManager.instance.LoacalPlay){
             Instantiate(player1);
             Instantiate(player2);
         }else{
+            if (DataManager.instance != null)
+            {
+                bestScore = DataManager.instance.bestScore;
+            }
+            if (bestScore != 0)
+            {
+                bestScoreText.text = bestScore.ToString();
+            }
             Instantiate(player1);
         }
             

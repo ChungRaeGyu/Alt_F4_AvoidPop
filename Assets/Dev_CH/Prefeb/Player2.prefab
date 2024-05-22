@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: c0ec54f4eef5c6745b99a6f06587a73c, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 5fdcde2b5a0909c4e90bc6d6776e413f, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -439,6 +439,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 77c6a2c9-23ae-4baa-a6ba-afad80d31826
+    m_ActionName: Player1/Move[/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4564712501041907104}
@@ -453,7 +457,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: f9c8a8ff-66b1-455e-b7ec-9ef03d2060e8
+    m_ActionId: 6b190700-e318-4c18-bfe9-9819ca55ca38
     m_ActionName: Player2/Move2[/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 

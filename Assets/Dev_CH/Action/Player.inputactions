@@ -13,15 +13,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Join",
-                    "type": "Value",
-                    "id": "e90129a4-eff9-4c52-89fc-e5b3071453e2",
-                    "expectedControlType": "Key",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -57,17 +48,6 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "114d82be-9b19-46d1-be99-d2d650a3f4ed",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Join",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
