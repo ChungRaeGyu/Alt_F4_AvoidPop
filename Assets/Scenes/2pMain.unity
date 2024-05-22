@@ -1557,12 +1557,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fc5af015011ea3745b7f78ea1dd1049f, type: 3}
   - {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
   - {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
-  - {fileID: 8300000, guid: 06906d718be5b6a4cb2df8732bf39832, type: 3}
-  - {fileID: 8300000, guid: 89f935015cc98724a862a586326fdf21, type: 3}
-  - {fileID: 8300000, guid: 0ad591428b0c18c4da51fe3bf98dbc63, type: 3}
-  - {fileID: 8300000, guid: bef0cef2ded0f0645ad90c6e5bdd4965, type: 3}
-  - {fileID: 8300000, guid: 35967e8a4dfb1664e9b066939272c0a4, type: 3}
-  - {fileID: 8300000, guid: 1f2ad53bacc245642854dbdc8ea71a9b, type: 3}
 --- !u!82 &1005906612
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3156,7 +3150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GameOver!
+  m_text: "TIL\uC740 \uC4F0\uACE0\n\uB178\uC2DC\uB294\uAC70\uC8E0?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0245d1a4537928a4a9b903e7ba0008da, type: 2}
   m_sharedMaterial: {fileID: 8573769826690154378, guid: 0245d1a4537928a4a9b903e7ba0008da, type: 2}
@@ -3183,8 +3177,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

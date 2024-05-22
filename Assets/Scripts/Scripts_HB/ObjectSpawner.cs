@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     public ObjectPool objectPool;
-    public float spawnInterval = 1f;
+    public float spawnInterval = 0.5f;
     public float spawnHeight = 5f;
     public float spawnRangeX = 2f;
     bool isFirst = true;
@@ -22,7 +22,7 @@ public class ObjectSpawner : MonoBehaviour
             {
                 SpawnObject();
                 timeSinceLastSpawn = 0f;
-                spawnInterval = 1f;
+                spawnInterval = 0.5f;
                 isFirst = false;
             }
         }
@@ -35,15 +35,15 @@ public class ObjectSpawner : MonoBehaviour
         }
         if(gameTime > 30f && gameTime <= 60f)
         {
-            spawnInterval = 0.75f;
+            spawnInterval = 0.3f;
         }
         else if(gameTime > 60f && gameTime <= 90f)
         {
-            spawnInterval = 0.5f;
+            spawnInterval = 0.2f;
         }
         else if(gameTime > 90f)
         {
-            spawnInterval = 0.25f;
+            spawnInterval = 0.1f;
         }
     }
 

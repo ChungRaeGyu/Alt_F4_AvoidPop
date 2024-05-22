@@ -5,11 +5,22 @@ using UnityEngine;
 public class FallingObject : MonoBehaviour
 {
     private ObjectPool objectPool;
+    public Sprite[] sprites = new Sprite[4];
     public float fallSpeed = 5f;
+    public SpriteRenderer spriteRenderer;
 
     void Start()
     {
         objectPool = FindObjectOfType<ObjectPool>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (this.CompareTag("Rain"))
+        {
+            spriteRenderer.sprite = sprites[Random.Range(0,sprites.Length)];
+        }
+        if (this.CompareTag("Item"))
+        {
+            fallSpeed = 3f;
+        }
     }
 
     private void Update()
